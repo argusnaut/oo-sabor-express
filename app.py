@@ -1,9 +1,9 @@
 from models.restaurant import Restaurant
 
 restaurant_praca = Restaurant("Praça", "Gourmet")
-restaurant_praca.add_rating("Gui", 10)
-restaurant_praca.add_rating("Lais", 8)
-restaurant_praca.add_rating("Emy", 5)
+restaurant_praca.add_rating("Gui", 5)
+restaurant_praca.add_rating("Lais", 4)
+restaurant_praca.add_rating("Emy", 2.5)
 
 
 def main():

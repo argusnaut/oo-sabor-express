@@ -28,13 +28,14 @@ class Restaurant:
         self._active = not self._active
 
     def add_rating(self, client, rate):
-        rating = Rating(client, rate)
-        self._rating.append(rating)
+        if 0 < rate <= 5:
+            rating = Rating(client, rate)
+            self._rating.append(rating)
 
     @property
     def average_rating(self):
         if not self._rating:
-            return 0
+            return '-'
         rating_sum = sum(rating._rating for rating in self._rating)
         rating_amount = len(self._rating)
         average = round(rating_sum / rating_amount, 1)
