@@ -13,6 +13,7 @@ class Restaurant:
     @classmethod
     def list_restaurants(cls):
         print(f"{"Nome do Restaurante".ljust(25)} | {"Categoria".ljust(25)} | {"Status"}")
+        print(f"{("-" * 24).ljust(25)} | {("-" * 24).ljust(25)} | {("-" * 6)}")
         for restaurant in cls.restaurants:
             print(f"{restaurant._name.ljust(25)} | {restaurant._category.ljust(25)} | {restaurant.active}")
 
@@ -22,10 +23,3 @@ class Restaurant:
 
     def change_status(self):
         self._active = not self._active
-
-
-restaurant_praca = Restaurant("praça", "Gourmet")
-restaurant_praca.change_status()
-restaurant_pizza = Restaurant("pizza Express", "Italiana")
-
-Restaurant.list_restaurants()
