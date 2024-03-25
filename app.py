@@ -13,7 +13,7 @@ restaurant_praca.add_to_menu(dish_paozinho)
 
 
 def main():
-    restaurant_praca.display_menu
+    restaurant_praca.display_menu()
 
 
 if __name__ == "__main__":
